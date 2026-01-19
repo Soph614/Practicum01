@@ -11,13 +11,13 @@ public class PersonGenerator {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        String ID = "";
-        String firstName = "";
-        String lastName = "";
-        String title = "";
+        String ID;
+        String firstName;
+        String lastName;
+        String title;
         String csvRecord;
-        int YOB = 0;
-        boolean done = false;
+        int YOB;
+        boolean done;
         ArrayList<String> records = new ArrayList<>();
 
         do {
