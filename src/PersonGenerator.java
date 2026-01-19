@@ -37,7 +37,7 @@ public class PersonGenerator {
         String fileName = in.nextLine();
 
         File workingDirectory = new File(System.getProperty("user.dir"));
-        Path file = Paths.get(workingDirectory.getPath() + '/' + "src" + '/' + fileName);
+        Path file = Paths.get(workingDirectory.getPath() + File.separator + "src" + File.separator + fileName);
         // the above line of code ensures that the file is written inside the "src" file of Practicum01.
 
         try {
