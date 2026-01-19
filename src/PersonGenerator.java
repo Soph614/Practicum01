@@ -33,8 +33,7 @@ public class PersonGenerator {
             done = SafeInput.getYNConfirm(in, "Are you done?");
         }while (!done);
 
-        System.out.println("Enter the file name: ");
-        String fileName = in.nextLine();
+        String fileName = SafeInput.getNonZeroLenString(in, "Enter the file name");
 
         File workingDirectory = new File(System.getProperty("user.dir"));
         Path file = Paths.get(workingDirectory.getPath() + File.separator + "src" + File.separator + fileName);
