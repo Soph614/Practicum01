@@ -21,11 +21,11 @@ public class PersonGenerator {
         ArrayList<String> records = new ArrayList<>();
 
         do {
-            ID = SafeInput.getNonZeroLenString(in, "Enter your ID number");
-            firstName = SafeInput.getNonZeroLenString(in, "Enter your first name");
-            lastName = SafeInput.getNonZeroLenString(in, "Enter your last name");
-            title = SafeInput.getNonZeroLenString(in, "Enter your title");
-            YOB = SafeInput.getRangedInt(in, "Enter your year of birth", 0, 100000);
+            ID = SafeInput.getNonZeroLenString(in, "Enter the ID number");
+            firstName = SafeInput.getNonZeroLenString(in, "Enter the first name");
+            lastName = SafeInput.getNonZeroLenString(in, "Enter the last name");
+            title = SafeInput.getNonZeroLenString(in, "Enter the title");
+            YOB = SafeInput.getRangedInt(in, "Enter the year of birth", 0, 100000);
             // create the record
             csvRecord = ID + ", " + firstName + ", " + lastName + ", " + title + ", " + YOB;
             records.add(csvRecord);
@@ -37,7 +37,8 @@ public class PersonGenerator {
         String fileName = in.nextLine();
 
         File workingDirectory = new File(System.getProperty("user.dir"));
-        Path file = Paths.get(workingDirectory.getPath() + fileName);
+        Path file = Paths.get(workingDirectory.getPath() + '/' + "src" + '/' + fileName);
+        // the above line of code ensures that the file is written inside the "src" file of Practicum01.
 
         try {
             OutputStream out = new BufferedOutputStream(Files.newOutputStream(file, CREATE));
